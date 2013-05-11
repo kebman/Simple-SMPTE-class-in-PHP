@@ -1,4 +1,4 @@
-Simple PHP SMPTE functions
+A Simple PHP SMPTE class
 ===================
 
 Some simple functions to deal with SMPTE code
@@ -25,6 +25,14 @@ Streamline so the algorithm can read and compute a CSV of SMPTEs, given a differ
 _And we're done!_
 
 Eat another banana
+
+#### Wish list
+* Easily spot and calculate differences for logging purposes
+* Manipulate many time codes at once
+* Update time codes, say in a CSV file, based on a time difference
+
+Ultimate goal: Create a program for logging online clips and takes 
+(hm, might need a fork to another language, as PHP probably wont't cut it)
 
 ### Please share, comment or correct :)
 
