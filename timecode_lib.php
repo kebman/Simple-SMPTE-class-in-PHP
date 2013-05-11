@@ -1,13 +1,14 @@
-<?php 
-class SMPTE_timecode {
+<?php
 	defined('PAL')	? null : define("PAL",	"25");
 	defined('NTSC')	? null : define("NTCS",	"29.97");
 	defined('FILM')	? null : define("FILM",	"24");
+class SMPTE_timecode {
 	public $framebase = PAL;
 
-	private function smpteToArray() {
+	public function smpteToArray($smpte) {
 		// to do: turn SMPTE-code into correctly formatted arrays
-		return void; 
+		$start_array = explode(":", $smpte);
+		return $start_array; 
 	}
 
 	public function arrayToSmpte(&$array){
