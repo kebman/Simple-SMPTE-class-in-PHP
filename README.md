@@ -25,3 +25,5 @@ Streamline so the algorithm can read and compute a CSV of SMPTEs, given a differ
 _And we're done!_
 
 Eat another banana
+
+### Please share, comment or correct :)
