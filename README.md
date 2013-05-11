@@ -1,7 +1,7 @@
-PHP-SMPTE-functions
+Simple PHP SMPTE functions
 ===================
 
-Some functions to deal with SMPTE code
+Some simple functions to deal with SMPTE code
 
 ### Goal:
 
@@ -27,3 +27,12 @@ _And we're done!_
 Eat another banana
 
 ### Please share, comment or correct :)
+
+If there's a better way to do this, I'd really like to know
+
+#### To do
+Make into a class
+Add stuff to read CSV, EDL, etc
+
+#### Why?
+Because I got fed up with the bad SMPTE calculators. I want to read loads of codes at once, so I just started doodling a bit in the language I know best.
