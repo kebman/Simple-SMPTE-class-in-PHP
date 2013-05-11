@@ -2,7 +2,7 @@
 $frameBase = 25; // PAL video now, but make it what you want
 
 function smpteToArray($smpte) {
-  // to do: turn SMPTE-code directly into correctly formatted arrays (without reduction)
+	// to do: turn SMPTE-code directly into correctly formatted arrays (without reduction)
 	return void; 
 }
 
@@ -47,11 +47,13 @@ function framesReductor($input) {
 }
 
 function totalFramesReductor($frames) {
-  $base     = $GLOBALS['framebase'];
+  $base     = $GLOBALS['frameBase'];
 	$hours 		= framesToHours($frames, $base);
 	$minutes	= framesReductor($hours, 60);
 	$seconds	= framesReductor($minutes, 60);
 	$frames		= framesReductor($seconds, $base);
 
 	return $smpte = array('hours' => floor($hours), 'minutes' => floor($minutes), 'seconds' => floor($seconds), 'frames' => round($frames));
+	// Beware: flooring and rounding like this might not be the best solution, but it's quick and dirty
+	// Instead of rounding, the extra decimals might be used for adjusting offset when computing differences, for instance
 }
