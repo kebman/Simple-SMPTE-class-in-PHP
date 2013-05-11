@@ -5,10 +5,15 @@
 class SMPTE_timecode {
 	public $framebase = PAL;
 
+	public function validateSmpte($smpte) {
+		// check that incomming string is a proper timecode
+		return void;
+	}
 	public function smpteToArray($smpte) {
 		// to do: turn SMPTE-code into correctly formatted arrays
-		$start_array = explode(":", $smpte);
-		return $start_array; 
+		$array = explode(":", $smpte);
+		$keys = array('hours', 'minutes', 'seconds', 'frames');
+		return $smpte = array_combine($keys, $array);
 	}
 
 	public function arrayToSmpte(&$array){
