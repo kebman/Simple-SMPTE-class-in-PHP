@@ -20,9 +20,9 @@ It would be cool to make a program (or plugin, say for VLC) that easily and effo
 Maybe this can provide a starting point?
 
 ### License
-Share away! :) Corrections, forks and contributions are also welcome.
+As long as you don't plan on earning money on it, and remember to give credit where it is due, then share away! :) Corrections, forks and contributions are also welcome.
 
-<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Some simple SMPTE functions</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/kebman/Simple-SMPTE-class-in-PHP.git" property="cc:attributionName" rel="cc:attributionURL">kebman</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/kebman/Simple-SMPTE-class-in-PHP.git" rel="dct:source">https://github.com/kebman/Simple-SMPTE-class-in-PHP.git</a>. 
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Some simple SMPTE functions</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/kebman/Simple-SMPTE-class-in-PHP.git" property="cc:attributionName" rel="cc:attributionURL">kebman</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/kebman/Simple-SMPTE-class-in-PHP.git" rel="dct:source">https://github.com/kebman/Simple-SMPTE-class-in-PHP.git</a>.
 
 ### Donate
 If you like my work and want me to continue, consider donating to 1Dzh4YhhCiCRUQMPNcps9LwVQbvfXaPVdM
