@@ -44,3 +44,6 @@ Add stuff to read CSV, EDL, etc
 
 #### Why?
 Because I got fed up with the bad SMPTE calculators. I want to read loads of codes at once, so I just started doodling a bit in the language I know best.
+
+### Donate
+If you like my work, and want me to continue, consider donating bitcoins to 1Dzh4YhhCiCRUQMPNcps9LwVQbvfXaPVdM
