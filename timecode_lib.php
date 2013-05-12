@@ -9,9 +9,12 @@ class SMPTE_timecode {
 		// check that incomming string is a proper timecode
 		return void;
 	}
+
 	public function smpteToArray($smpte) {
-		// to do: turn SMPTE-code into correctly formatted arrays
 		$array = explode(":", $smpte);
+		foreach ($array as $key => $value) {
+			$array[$key] = (int)$value;
+		}
 		$keys = array('hours', 'minutes', 'seconds', 'frames');
 		return $smpte = array_combine($keys, $array);
 	}
@@ -32,14 +35,14 @@ class SMPTE_timecode {
 	}
 
 	public function reduceToFrames(&$array) {
-		$base 		= $GLOBALS['framebase'];
-		$array 		= array_values($array);
+		$base = $this->framebase;	
+		$array		= array_values($array);
 		$hours 		= $array[0]*60*60*$base; // hours to frames
 		$minutes 	= $array[1]*60*$base; // minutes to frames
 		$seconds 	= $array[2]*$base; // seconds to frames
 		$frames 	= $array[3];
 
-		return $allframes = $frames+$seconds+$minutes+$hours;
+		return $allframes = $hours+$minutes+$seconds+$frames;
 	}
 
 	protected function framesToHours($frames, $base) {
@@ -54,7 +57,7 @@ class SMPTE_timecode {
 	}
 
 	public function totalFramesReductor($frames) {
-		$base 		= $GLOBALS['framebase'];
+		$base		= $this->framebase;
 		$hours 		= framesToHours($frames, $base);
 		$minutes	= framesReductor($hours, 60);
 		$seconds	= framesReductor($minutes, 60);

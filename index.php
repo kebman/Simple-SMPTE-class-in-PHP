@@ -23,7 +23,21 @@
 		?></p>
 		<p>Exploded array: <?php 
 		$smptearray = $timecode->smpteToArray($smpteA);
-		print_r($smptearray); ?></p>
+		var_dump($smptearray); ?></p>
+		<h4>Array to frames</h4>
+		<p>Total frames: <?php 
+		$frames = $timecode->reduceToFrames($smptearray);
+		echo $frames;
+		?></p>
+		<p><?php var_dump($frames); ?></p>
+		<h4>Add to other SMPTE</h4>
+		<p>Other array: <?php 
+		$smpteB = "00:00:33:12";
+		echo $smpteB;
+		?></p>
+		<?php 
+		
+		?>
 	</article>
 </section>
 <footer></footer>
