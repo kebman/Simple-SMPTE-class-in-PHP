@@ -51,6 +51,7 @@
      data-shared="false">
     <div class="blockchain stage-begin">
         <img src="https://blockchain.info//Resources/buttons/donate_64.png"/>
+        <p>If you like the code, consider donating :)</p>
     </div>
     <div class="blockchain stage-loading" style="text-align:center">
         <img src="https://blockchain.info//Resources/loading-large.gif"/>
