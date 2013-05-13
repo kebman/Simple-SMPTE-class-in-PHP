@@ -5,18 +5,26 @@ require_once('config.php');
 class SMPTE_to_frames {
 	public $framebase = PAL;
 	// 1. validate input
-	private function validateSMPTE($smpte) {
-		// to do: check that incomming string is a proper timecode
-		// regex here…
-		return $smpte;
-	}
+	public function validateSMPTE($smpte) {
+		$regex = "/^[0-9]{1,2}+:[0-9]{1,2}+:[0-9]{1,2}+:[0-9]{1,2}$/";	
+		if (preg_match($regex, $smpte)) {
+			return $smpte;
+		} else {
+			return void;
+		}
+	} 
 	// 2. store input in array
 	private function smpteToArray($smpte) {
 		$array = explode(":", $smpte);
 		foreach ($array as $key => $value) {
 			$array[$key] = (int)$value;
 		}
-		return $array;
+		// Another round of validation
+		if ($array[0]<25 and $array[1]<60 and $array[2]<60 and $array[3]<$this->framebase){
+			return $array;
+		} else {
+			return void;
+		}
 	}
 	// 3. compute total frames from array
 	private function reduceToFrames(&$array) {
@@ -39,12 +47,10 @@ class Frames_to_SMPTE extends SMPTE_to_frames {
 	// Frames to SMPTE:
 	// 1. validate input
 	private function validateFrames($frames) {
-		// to do: check that 
 		if (is_int($frames)) {
 			return $frames;
 		} else {
-			// error…
-			trigger_error("Frame number not valid", E_USER_ERROR);
+			return void;
 		}
 	}
 	// 2. compute frames into array
@@ -55,8 +61,7 @@ class Frames_to_SMPTE extends SMPTE_to_frames {
 	}
 	// Helper method B
 	// Compute hour conversion into floored hours, minutes, seconds and frames
-	// "Move" decimal-rest down the "chain"… 
-	// …to compute SMPTE frames more accurately
+	// "Move" decimal-rest right to compute SMPTE frames more accurately
 	private function frameExpander($input, $base) {
 		$floor = floor($input);
 		$rest = $input-$floor;
@@ -85,14 +90,39 @@ class Frames_to_SMPTE extends SMPTE_to_frames {
 				echo ":";
 			}
 		}
-		return $smpte; 
+		return $smpte;
 	}
 	// 4. get result
 	public function computeSmpte($frames) {
 		$validated = $this->validateFrames($frames);
-		$reduced = $this->framesToArray($validated);
-		return $smpte = $this->arrayToSmpte($reduced);
+		$expanded = $this->framesToArray($validated);
+		return $smpte = $this->arrayToSmpte($expanded);
 	}
 
 }
+// class ComputeSMPTEdiff extends Frames_to_SMPTE {
+	// public $smpte_a;
+	// public $smpte_b;
+	
+	// Algorithm
+	// 1A. Get Frames_A by whichever method
+	// 1B. Find out if Frames_A is SMPTE or frames
+	// 1C. Store Frames_A
+	// 2. Repeat for Frames_B
+
+	// 1. Validate and store
+	// Check whether input is SMPTE string or frames
+/*
+	public function validate_timecode($input) {
+		$regex = "[0-9]{1,2}"
+		if (is_int($input)) {
+			// code for frames
+		} else if () {}
+		// check if SMPTE string
+	}
+*/
+
+
+// }
+
 ?>
