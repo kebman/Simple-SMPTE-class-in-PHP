@@ -15,12 +15,29 @@
 </header>
 <section>
 	<article>
-		<h3>Three simple tests</h3>
+		<h1>Some simple math</h1>
+		<p>Compute the addition of SMPTE code A to B.</p>
 		<ul>
-			<li><a href="debug.php">Debug</a></li>
-			<li><a href="math.php">Match</a></li>
-			<li><a href="batch.php">Batch</a></li>
+			<li>Code A: <?php 
+			$code_a = "00:05:24:13";
+			echo $code_a;
+			?></li>
+			<li>Code B: <?php 
+			$code_b = "00:00:52:08";
+			echo $code_b;
+			?></li>
 		</ul>
+		<p>Frame summation: <?php 
+		$calc = new Frames_to_SMPTE();
+		$code_a = $calc->computeFrames($code_a);
+		$code_b = $calc->computeFrames($code_b);
+		$code_c = $code_a+$code_b;
+		echo "A ".$code_a ." + B ". $code_b." = C ".$code_c;
+		?></p>
+		<p>Converting Code C to SMPTE, we get: <?php
+		$diff = $calc->computeSmpte($code_c);
+		echo $diff;
+		?>
 	</article>
 </section>
 <footer>

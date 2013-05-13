@@ -80,17 +80,12 @@ class Frames_to_SMPTE extends SMPTE_to_frames {
 	// 3. make array into string
 	public function arrayToSmpte($array) {
 		$items 	= count($array);
-		$i 		= 0;
-		foreach ($array as $value) {
+		foreach ($array as $key => $value) {
 			if ($value < 10) {
-				$value = "0{$value}";
-			}
-			echo $value;
-			if (++$i != $items){ 
-				echo ":";
+				$array[$key] = "0{$value}";
 			}
 		}
-		return $smpte;
+		return implode(":", $array);
 	}
 	// 4. get result
 	public function computeSmpte($frames) {
@@ -100,29 +95,24 @@ class Frames_to_SMPTE extends SMPTE_to_frames {
 	}
 
 }
-// class ComputeSMPTEdiff extends Frames_to_SMPTE {
-	// public $smpte_a;
-	// public $smpte_b;
-	
-	// Algorithm
-	// 1A. Get Frames_A by whichever method
-	// 1B. Find out if Frames_A is SMPTE or frames
-	// 1C. Store Frames_A
-	// 2. Repeat for Frames_B
+class Compute_SMPTE extends Frames_to_SMPTE {
+	private $smpte_a;
 
-	// 1. Validate and store
-	// Check whether input is SMPTE string or frames
-/*
-	public function validate_timecode($input) {
-		$regex = "[0-9]{1,2}"
-		if (is_int($input)) {
-			// code for frames
-		} else if () {}
-		// check if SMPTE string
+	public function set_a($smpte_a){
+		$this->smpte_a = $this->computeFrames($smpte_a);
 	}
-*/
 
+	public function sync_codes(&$array) {
+		foreach ($array as $key => $smpte_b) {
+			$new_key = "{$smpte_b}";		
+			$oldvalue = $this->computeFrames($smpte_b);
+			$addition = $this->smpte_a+$oldvalue;
+			$newvalue = $this->computeSmpte($addition);	
+			$new_array[$new_key] = $newvalue;
+		}
+		return $new_array;
+	}
 
-// }
+}
 
 ?>

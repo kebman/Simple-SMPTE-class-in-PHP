@@ -15,12 +15,37 @@
 </header>
 <section>
 	<article>
-		<h3>Three simple tests</h3>
-		<ul>
-			<li><a href="debug.php">Debug</a></li>
-			<li><a href="math.php">Match</a></li>
-			<li><a href="batch.php">Batch</a></li>
-		</ul>
+		<h1>There and back again:</h1>
+		<h3>SMPTE_to_frames()</h3>
+		<h4>Test of instantiation</h4>
+		<p>Dumping object info: 
+		<?php 
+		$frames = new SMPTE_to_frames();
+		var_dump($frames); ?></p>
+		<h4>Compute frames</h4>
+		<p>SMPTE string to be converted: <?php 
+		$smpteA = "00:05:24:13";
+		echo $smpteA;
+		?></p>
+		<p>Computed frames: <?php 
+		$frames = $frames->computeFrames($smpteA);
+		var_dump($frames);
+		?></p>
+		<h3>frames_to_SMPTE()</h3>
+		<h4>New instance test</h4>
+		<p>Dumping object info: <?php 
+		$smpte = new frames_to_SMPTE();
+		var_dump($smpte);
+
+		?></p>
+		<h4>Compute SMPTE</h4>
+		<p>Frames to be converted: <?php 
+		echo $frames;
+		?></p>
+		<p>Computed SMPTE string: <?php 
+		$smpte = $smpte->computeSmpte($frames);
+		echo $smpte;
+		?>
 	</article>
 </section>
 <footer>
