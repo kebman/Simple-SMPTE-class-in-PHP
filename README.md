@@ -8,6 +8,8 @@ The methods in the class converts a timecode into frames so you can do simple ma
 
 The best feature of this class is probably that it lets you convert a whole list or array of codes with relatively little tweaking, however this feature is still under development.
 
+Check out the Wiki for a more technical walk-trough.
+
 ### Why?
 Because there are so many bad SMPTE calculators out there, most of which do not accept a full SMPTE string pasted into the form (unless you are willing to pay trough your nose). Also I couldn't find a free calculator that actually could process a wohle list of timecodes.<sup><a href="#timelist">2</a></sup>
 
