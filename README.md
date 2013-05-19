@@ -11,7 +11,7 @@ The best feature of this class is probably that it lets you convert a whole list
 Check out the Wiki for a more technical walk-trough.
 
 ### Why?
-Because there are so many bad SMPTE calculators out there, most of which do not accept a full SMPTE string pasted into the form (unless you are willing to pay trough your nose). Also I couldn't find a free calculator that actually could process a wohle list of timecodes.<sup><a href="#timelist">2</a></sup>
+Because there are so many bad SMPTE calculators out there, most of which do not accept a full SMPTE string pasted into the form (unless you are willing to pay trough your nose). Also I couldn't find a free calculator that actually could process a wohle list<sup><a href="#timelist">2</a></sup> of timecodes.
 
 I realize PHP might not be the best programming language for the job, so a port to another language is probably in order, say to Java or Javascript. I simply picked it because it is the language I know best. However, since the computation is usually quite trivial and browsers are ubiquitous accross platforms, I see no reason to make a standalone program out of the code (but you're of course free to do so if that is what you wish).
 
