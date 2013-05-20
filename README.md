@@ -4,9 +4,9 @@ A simple SMPTE class in PHP
 ### What? 
 In the library folder you'll find a simple PHP class <code>timecode.php</code> for dealing with SMPTE timecodes.<sup><a href="#timecodes">1</a></sup> 
 
-The methods in the class converts a timecode into frames so you can do simple math operations on it, and then turns it back to a timecode again.
+The methods in the class converts a timecode into frames so you can do simple math operations with it, and then turns it back into a timecode again.
 
-The best feature of this class is probably that it lets you convert a whole list or array of codes with relatively little tweaking, however this feature is still under development.
+The best feature of this class is probably that it lets you convert a whole array of codes with relatively little tweaking, however this feature is still under development.
 
 Check out the Wiki for a more technical walk-trough.
 
