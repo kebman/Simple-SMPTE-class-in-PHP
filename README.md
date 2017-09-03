@@ -36,7 +36,7 @@ As long as you don't plan on earning money on it, and remember to give credit wh
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Simple SMPTE class in PHP</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/kebman/Simple-SMPTE-class-in-PHP.git" property="cc:attributionName" rel="cc:attributionURL">kebman</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/kebman/Simple-SMPTE-class-in-PHP.git" rel="dct:source">https://github.com/kebman/Simple-SMPTE-class-in-PHP.git</a>.
 
 ### Donate
-If you like my work and want me to continue, consider donating to 1Dzh4YhhCiCRUQMPNcps9LwVQbvfXaPVdM
+If you like my work and want me to continue, consider donating to 1B7axexG6avxtexusiCETzhqeHtAhqtasc
 
 ### Notes
 <sup><a id="timecodes">1</a></sup> A timecode is simply a point in a film, a clip or movie. It is written <code>hh:mm:ss:ff</code>, where h = hours, m = minutes, s = seconds and f = frames. The point usually represents a single frame in the film, but it can also represent a duration, or an in-point and an out-point. It is used both for editing the film, but also logging clips by providing notes and info next to the timecode, thus the SMPTE timecode is an indispensible tool for keeping track of your film project. Here's what Wikipedia says about the <a href="http://en.wikipedia.org/wiki/SMPTE_timecode">SMPTE code</a>. 
